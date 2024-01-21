@@ -1,0 +1,152 @@
+/*** Global || Variables ****/
+:root{
+    --main-color:rgba(214, 46, 51 , 0.6);
+    --transition-time:.5s;
+}
+
+/****** General || Style *****/
+html{
+    scroll-behavior: calc(10%);
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+/******* Home || Part ******/
+.home{
+   height: 100dvh;
+   
+   background-image: linear-gradient(var(--main-color),var(--main-color)), url('../images/bg.jpeg'); 
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.home .title{
+    font-size: 70px;
+}
+
+.home .icon{
+    cursor: pointer;
+    padding-left:20px;
+}
+
+@media(max-width:767px){
+    .home .title{
+        font-size: 50px;
+    }
+}
+/****** Sidebar || Part ******/
+.sidebar {
+    width: 20%;
+    left:0;
+    top:0;
+}
+
+.sidebar .menu{
+    width: 80%;
+}
+
+.sidebar button,
+.sidebar a{
+    transition: var(--transition-time);
+    -webkit-transition: var(--transition-time);
+    -moz-transition: var(--transition-time);
+    -ms-transition: var(--transition-time);
+    -o-transition: var(--transition-time);
+}
+
+.sidebar a:hover,
+.sidebar button:hover{
+  color:var(--main-color) !important;
+}
+
+@media(max-width:1200px){
+    .sidebar{
+        width: 25% !important;
+    }
+}
+
+@media(max-width:992px){
+    .sidebar{
+        width: 30% !important;
+    }
+}
+
+@media(max-width:768px){
+    .sidebar{
+        width: 40% !important;
+    }
+}
+
+@media(max-width:600px){
+    .sidebar{
+        width: 50% !important;
+    }
+}
+
+@media(max-width:400px){
+    .sidebar{
+        width: 80% !important;
+    }
+}
+
+/***** Singers || Part *****/
+.singer h2.name{
+    background-color: var(--main-color) !important;
+    cursor: pointer;
+}
+
+@media(max-width:992px){
+    .singer{
+        width: 80% !important;
+    }
+}
+
+
+/******* Counter || Part******/
+.count-down{
+    background-image: linear-gradient(var(--main-color),var(--main-color)), url('../images/join.jpeg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/******* Contact || Part *******/
+.socials a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height:35px !important;
+    width: 35px !important;
+
+    border: 1px solid #ccc;
+
+    transition: var(--transition-time);
+    -webkit-transition: var(--transition-time);
+    -moz-transition: var(--transition-time);
+    -ms-transition: var(--transition-time);
+    -o-transition: var(--transition-time);
+}
+.socials a:hover{
+    background-color:#dc3545;
+}
+.socials a:hover i{
+    color: #fff !important;
+}
+
+.form textarea{
+    height: 150px;
+    resize: vertical;
+}
+
+.form  button{
+    width: fit-content;
+}
+
+.form-control:focus{
+    border-color: var(--main-color);
+    box-shadow: 0 0 0.2rem 3px #dc354670;
+}
